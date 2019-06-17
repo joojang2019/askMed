@@ -1,0 +1,26 @@
+<% include ../partials/header %>
+      <% prescriptions.prescriptions.forEach(function(prescription){  %>
+             
+            <div class="col-md-3 col-sm-6">
+                  
+                <div class="thumbnail">
+                    <div class="thumbnail-box">
+                        <p><%=prescription.medication%></p> 
+                    </div>
+                    <div class="caption">
+                      <br>
+                      <span><em><%= prescription.createdAt.toDateString() %></em></span>
+                      <button class="btn btn-primary">Reorder</button>
+                     
+                    <!--<p>-->
+                    <!--    <a href="/vendors/" class="btn btn-primary">More Info</a>-->
+                    <!--</p>-->
+                    </div>
+                    
+                </div>
+                
+            </div>   
+        <% }); %>
+        
+        
+<% include ../partials/footer %>

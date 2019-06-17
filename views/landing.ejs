@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AskMed</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/landing.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+    </head>
+    <body>
+    
+    <div class="container">
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-success" role="alert">
+                <%= success %>
+            </div>
+        <% } %>
+    </div>
+    
+    
+
+ 		
+		<!--<a href="/vendors" class="btn btn-lg btn-success">View All Vendors</a>-->
+	
+		<!--<p>-->
+  <!--          <form action="/vendors" method="GET" class="form-inline">-->
+  <!--               <div class="form-group">-->
+  <!--                   <input type="text" name="search" placeholder = "Vendor search..." class="form-control">-->
+  <!--                   <input type="submit" value="Search" class="btn btn-default">-->
+  <!--               </div>-->
+  <!--          </form>-->
+  <!--      </p>-->
+
+
+    <div class="row">
+      <header class="jumbotron">
+         <div class="container">
+             <h1>AskMed</h1>
+ 		     <h3>Simple medication delievered to you</h3>
+         </div>
+      </header>
+          <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+
+            <div class=" col-md-6">
+     		       <h1 style="text-align: center">SignUp</h1>
+     		        <div id="landing-login">
+                    <form action="/register" method="post">
+                            <div class="form-group">
+                                <input class="form-control" type="email" name="email" placeholder="email">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="firstName" placeholder="first name">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="lastName" placeholder="last name">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="username" placeholder="username">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="password" name="password" placeholder="password">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="avatar" placeholder="avatar url">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="adminCode" placeholder="admin code">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-lg btn-primary btn-block">Sign Up!</button>
+                            </div>
+                        </form>
+                </div>
+                
+            </div>
+    
+            <div class="col-md-6">
+                
+                    <h1 style="text-align: center">Login</h1>
+                    <div id="landing-signup">
+                        <form action="/login" method="post">
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="username" placeholder="username">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="password" name="password" placeholder="password">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-lg btn-primary btn-block">Login</button>
+                            </div>
+                        </form>
+                        <a id="forgot" href="/forgot">Forgot Password?</a>
+                    </div>
+                        
+                   
+              </div>
+            </div>
+    </div>
+    
+<% include partials/footer %>

@@ -1,0 +1,22 @@
+
+
+#landing-header {
+    z-index: 1;
+    position: absolute;
+    top: 50px; left: 150px;
+    text-align: center;
+}
+
+#landing-login{
+  width: 50%; 
+  margin: 25px auto;
+}
+
+#landing-signup{
+  width: 50%;
+  margin: 25px auto;
+  left: 300px;
+}
+
+.jumbotron{
+}
